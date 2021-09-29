@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header nav{
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    transition: 0.5s;
+    box-shadow:0px 0px 5px grey;
+}
+
+header nav .right-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+header nav .right-sec .desktop a{
+    text-decoration: none;
+    margin: 0px 10px;
+    font-size: 1.1rem;
+    color: black;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+header nav .right-sec .desktop a:hover{
+    color: #FFC40E;
+}
+header nav .right-sec .desktop .call{
+    color: #ffbf00;
+    font-size: 1.3rem;
+}
+header nav .right-sec .desktop .call:hover{
+    color: black;
+}
+.sidemenu{
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width: 880px){
+    nav{
+        position: fixed;
+        bottom: 0;
+        background-color: #FFC40E;
+    }
+   
+    .right-sec .desktop  a{
+        display: none;
+    }
+    .right-sec .desktop .call{
+        display: block;
+    }
+    header nav .right-sec .desktop .call{
+        color: black;
+    }
+
+    #toggle.active{
+        background:#00EAD3;
+      }
+      .toggle-menu{
+          background-color: black;
+          position: relative;
+          right: 0;
+          margin-left: 200px;         
+      }
+      #toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition:0.2s;
+      }
+      #toggle.active::before{
+      transform:translateY(0px) rotate(45deg);
+      box-shadow:0 0 0 black;
+      }
+      #toggle::before{
+        content:'';
+        position:absolute;
+        background:black;
+        width:26px;
+        height:4px;
+        transition:0.2s;
+        box-shadow:0 10px 0 black;
+        transform:translateY(-10px);
+      }
+      #toggle::after{
+        content:'';
+        position:absolute;
+        background:black;
+        width:26px;
+        height:4px;
+        transition:0.2s;
+        background:black;
+        transform:translateY(10px);
+      }
+      #toggle.active::after{
+        transform:translateY(0px) rotate(-45deg);
+      }
+
+      .sidemenu{
+        position:fixed;
+        top:0;
+        left:-40%;
+        width:40%;
+        height:100%;
+        background:#222;
+        z-index:1;
+        overflow-x:hidden;
+        transition:0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+     }
+
+     .sidemenu a{
+        text-decoration:none;
+        display:block;
+        color:white;
+        padding:10px;
+        font-size: 1.1rem;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 600;
+     }
+    .sidemenu a:hover{
+        color: #FFC40E;
+    }
+    .sidemenu.active{
+        left: 0%;
+    }
+
+} 
+
+@media only screen and (max-width: 450px){
+    .toggle-menu{
+        background-color: black;
+        position: relative;
+        right: 0;
+        margin-left: 70px;         
+    }
+
+
+
+
+}
