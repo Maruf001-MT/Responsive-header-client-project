@@ -106,8 +106,8 @@ header nav .right-sec .desktop .call:hover{
       .sidemenu{
         position:fixed;
         top:0;
-        left:-40%;
-        width:40%;
+        left:-50%;
+        width:50%;
         height:100%;
         background:#222;
         z-index:1;
